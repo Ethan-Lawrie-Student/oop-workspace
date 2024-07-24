@@ -1,0 +1,5 @@
+1. The log message provides insight into what changes and additions were made for that particular commit
+2. A good commit message would be one that is verbose and conveys all that has been changed without being to concise or long.
+3. A commit should be made often if possible, but when there is a part of code that is finished and works.
+4. Generated files and extra files that are not needed to be uploaded can be ommitted, otherwise all files should be included as well as logs. True.
+
