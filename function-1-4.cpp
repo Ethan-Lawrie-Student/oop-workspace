@@ -1,6 +1,6 @@
 #include <iostream>
 
-int array_sum(int array[], int n) {
+int sum_two_arrays(int array[], int secondarray[], int n) {
     int sum;
 
     sum = 0;
@@ -10,6 +10,10 @@ int array_sum(int array[], int n) {
 
         for (int i = 0; i < n; i++) {
             sum = sum + array[i];
+        }
+
+        for (int i = 0; i < n; i++) {
+            sum = sum + secondarray[i];
         }
     }
 
