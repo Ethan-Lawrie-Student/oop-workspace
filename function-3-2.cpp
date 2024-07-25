@@ -1,9 +1,10 @@
+#include <cmath>
 #include <iostream>
 
 int median_array(int array[], int n) {
   int median;
 
-  if (n > 1) {
+  if (n > 1 && remainder(n, 2) == 1) {
     for (int i = 1; i < n; i++) {
       for (int j = 1; j < n; j++) {
         if (array[j] < array[j - 1]) {
@@ -12,7 +13,7 @@ int median_array(int array[], int n) {
           array[j] = temp;
         }
       }
-        }
+    }
     median = array[n / 2];
   } else if (n == 1) {
     median = array[0];
