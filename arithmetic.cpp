@@ -4,9 +4,10 @@
 using namespace std;
 
 
-int shift_right(int input) {
+void shift_right(int input) {
 
-    int array[32], newArray[32];
+    int array[32];
+    string newArray[32];
 
     int newint = 0;
 
@@ -17,25 +18,29 @@ int shift_right(int input) {
         input = input / 2;
     }
 
-    newArray[0] = array[0];
+    newArray[0] = to_string(array[0]);
 
     for(int i = 0; i < index - 1; i++) {
-        newArray[i+1] = array[i];
+        newArray[i+1] = to_string(array[i]);
         
     }
 
-    for(int i = 0; i < index - 1; i++) {
-        newint = newint * 10 + newArray[i];
+
+    // newint = stoi(newArray);
+    // for(int i = 0; i < index - 1; i++) {
+    //     newint = newint * 10 + newArray[i];
         
-    }
-    return newint;
+    // }
+
+    cout << newArray << endl;
+    // return newArray;
 }
 
 
 
 
 int main() {
-    cout << shift_right(101) << endl;
+    shift_right(101);
     
     return 0;
 }
