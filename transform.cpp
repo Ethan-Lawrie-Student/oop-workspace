@@ -34,6 +34,6 @@ int to_base2(int input) {
 int main() {
 
     
-    cout << to_base2(5) << endl;
+    cout << to_base2(12) << endl;
     return 0;
 }
