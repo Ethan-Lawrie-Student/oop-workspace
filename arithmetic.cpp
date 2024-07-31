@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void shift_right(int input) {
+int shift_right(int input) {
 
     int array[32];
     string newArray[32];
@@ -32,15 +32,15 @@ void shift_right(int input) {
         
     // }
 
-    cout << newArray << endl;
-    // return newArray;
+    // cout << newArray << endl;
+    return stoi(newArray);
 }
 
 
 
 
 int main() {
-    shift_right(101);
+    cout << shift_right(101) << endl;
     
     return 0;
 }
