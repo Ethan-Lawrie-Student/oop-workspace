@@ -3,44 +3,41 @@
 
 using namespace std;
 
+string shift_right(string input) {
+  //   int array[32];
+  string newArray;
+  string inputString;
 
-int shift_right(int input) {
+  //   int index = 0;
 
-    int array[32];
-    string newArray[32];
+  inputString = input;
 
-    int newint = 0;
+  //   cout << to_string(input) << endl;
 
-    int index = 0;
-    //extract the digits into array
-    while (input > 0) {
-        array[index] = input % 2;
-        input = input / 2;
-    }
+  //   index = inputString.length();
 
-    newArray[0] = to_string(array[0]);
+  newArray = inputString.at(0);
 
-    for(int i = 0; i < index - 1; i++) {
-        newArray[i+1] = to_string(array[i]);
-        
-    }
+  newArray = newArray + inputString;
 
+  newArray.pop_back();
 
-    // newint = stoi(newArray);
-    // for(int i = 0; i < index - 1; i++) {
-    //     newint = newint * 10 + newArray[i];
-        
-    // }
+  //   index = log10(input) + 1;
 
-    // cout << newArray << endl;
-    return stoi(newArray);
+  //   newArray = to_string(array[0]);
+
+  //   cout << to_string(array[1]) << endl;
+
+  //   for (int i = 0; i < index - 1; i++) {
+  //     cout << "test ";
+  //     newArray = newArray + to_string(array[i]);
+  //   }
+
+  return newArray;
 }
 
-
-
-
 int main() {
-    cout << shift_right(101) << endl;
-    
-    return 0;
+  cout << shift_right("1001") << endl;
+
+  return 0;
 }
