@@ -23,7 +23,7 @@ void printArray(double* array, int size) {
     for(int i = 0; i < size; i++) {
         std::cout << array[i] << " ";
     }
-    cout << "\n";
+    std::cout << "\n";
 }
 
 double arrayMax(double* array, int size) {
