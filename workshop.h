@@ -21,7 +21,7 @@ void changeValue(double* doubleVal) {
 
 void printArray(double* array, int size) {
     for(int i = 0; i < size; i++) {
-        std::cout << array[i] << std::endl;
+        std::cout << array[i] << " ";
     }
 }
 
@@ -42,7 +42,7 @@ double* dynamicArray(int N, double M) {
     for (int i = 0; i<N; i++) {
         
         array[i] = M;
-        std::cout << array[i] << std::endl;
+        // std::cout << array[i] << std::endl;
     } 
 
     return array;  
