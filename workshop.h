@@ -26,7 +26,7 @@ void printArray(double* array, int size) {
 }
 
 double arrayMax(double* array, int size) {
-    int max = array[0];
+    double max = array[0];
 
     for(int i = 1; i < size; i++) {
         if (array[i] > max) {
