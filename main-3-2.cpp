@@ -1,15 +1,16 @@
 #include <iostream>
 
-extern int *reverseArray(int *numbers1,int length) ;
-
+extern int *reverseArray(int *numbers1, int length);
+extern int *readNumbers();
+extern bool equalsArray(int *numbers1, int *numbers2, int length);
 int main() {
-    int array1[5] = {1,2,3,4,5}; 
-    
-    int *myArray = reverseArray(array1, 5);
+  int array1[5] = {1, 2, 3, 4, 5};
 
-    for (int i = 0; i < 5; i++) {
-        std::cout << myArray[i] << std::endl;
-    }
+  int *myArray = reverseArray(array1, 5);
 
-    return 0;
+  for (int i = 0; i < 5; i++) {
+    std::cout << myArray[i] << std::endl;
+  }
+
+  return 0;
 }
