@@ -11,13 +11,27 @@ int *readNumbers() {
   return numArray;
 }
 
+int *bubbleSort(int *sumArray, int length) {
+  for (int i = 0; i < length; i++) {
+    for (int j = 1; j < length; j++) {
+      if (sumArray[j] < sumArray[j - 1]) {
+        int temp = sumArray[j - 1];
+        sumArray[j - 1] = sumArray[j];
+        sumArray[j] = temp;
+      }
+    }
+  }
+
+  return sumArray;
+}
+
 int secondSmallestSum(int *numbers, int length) {
   int arrLength = (length * (length + 1)) / 2;
 
-  int sumArray[arrLength];
-  int index;
+  int *sumArray = new int[arrLength];
+  int index = 0;
 
-  cout << " ";
+  // cout << " ";
   for (int i = 0; i < length; i++) {
     for (int j = 0; j < length - i; j++) {
       int sum = 0;
@@ -28,10 +42,14 @@ int secondSmallestSum(int *numbers, int length) {
       index++;
     }
   }
+  // cout << " " << endl;
 
-  for (int i = 0; i < arrLength; i++) {
-    cout << sumArray[i] << ", ";
-  }
+  int *newArray = bubbleSort(sumArray, arrLength);
 
-  return 89;
+  // for (int i = 0; i < arrLength; i++) {
+  //   cout << newArray[i] << ", ";
+  // }
+  return newArray[1];
+
+  delete[] newArray;
 }
