@@ -40,6 +40,4 @@ void hexDigits(int *numbers, int length) {
     }
     cout << i << " " << numbers[i] << " " << hex << endl;
   }
-
-  delete[] numbers;
 }
