@@ -45,7 +45,7 @@ bool ApartmentBuilding::add_Unit(Unit unit){
 
         can_add = true;
 
-        cur_size += 1;
+        cur_size  = cur_size + 1;
     }
 
     return can_add;
