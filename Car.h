@@ -13,7 +13,7 @@ public:
     Car(int ID) : Vehicle(ID) {};
 
     int getParkingDuration() {
-        int timeTaken = (time(0) - getTime()) * 0.9;
+        int timeTaken = (time(0) - getTime()) * 0.9-1;
         return timeTaken;
     }
     
