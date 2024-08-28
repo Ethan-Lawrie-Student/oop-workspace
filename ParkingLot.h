@@ -39,10 +39,9 @@ public:
         bool hasFoundVehicle = false;
         
         for(int i = 0; i < curNum; i++) {
-            std::cout << "Requested ID: " << ID << ", Current ID: " << vehicles[i].getID() << std::endl;
-
+            
             if(ID == vehicles[i].getID()) {
-                std::cout << "Found vehicle" << std::endl;
+                
                 hasFoundVehicle = true;
 
                 for(int j = i; j < curNum - 1; j++) {
@@ -58,8 +57,6 @@ public:
         if(hasFoundVehicle == false) {
             std::cout << "Vehicle not in the lot " << std::endl;
         } 
-
-        std::cout << "Vehicles remaining: " << getCount() << std::endl;
     }
 
     int countOverstayingVehicles(int maxParkingDuration){
