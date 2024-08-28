@@ -36,12 +36,16 @@ int main(){
         
     }
 
+    std::cout << parking.getCount() << std::endl;
+
     int IDRemove;
 
     std::cout << "ID of vehicle to remove: ";
     std::cin >> IDRemove;
 
     parking.unparkVehicle(IDRemove);
+
+    std::cout << parking.getCount() << std::endl;
 
     // for (int i = 0; i < vehicleAmount; i++) {
     //     std::cout << "Vehicle ID: " << vehicles[i].getID() << ", Time Parked: " << vehicles[i].getParkingDuration() << "s " << std::endl;
