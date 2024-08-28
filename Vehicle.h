@@ -11,6 +11,10 @@ private:
     int ID;
 
 public:
+    Vehicle() {
+        timeOfEntry = time(0);
+        this->ID = 0;
+    }
 
     Vehicle(int ID) {
         timeOfEntry = time(0);
@@ -25,6 +29,10 @@ public:
         return timeOfEntry;
     }
 
+    virtual int getParkingDuration(){ 
+        int timeTaken = (time(0) - getTime());
+        return timeTaken;
+    };
     
     
 };

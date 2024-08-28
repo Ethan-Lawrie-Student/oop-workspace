@@ -2,17 +2,17 @@
 #include "Bus.h"
 #include "Vehicle.h"
 #include "Car.h"
+#include "ParkingLot.h"
 
 #include <iostream>
 
 int main(){
 
-    int vehicleAmount;
+    int vehicleAmount = 3;
 
-    std::cout << "How many vehicles are you going to park: ";
-    std::cin >> vehicleAmount;
+    ParkingLot parking = ParkingLot(vehicleAmount);
 
-    Vehicle *vehicles = new Vehicle[vehicleAmount];
+    
 
     for (int i = 0; i < vehicleAmount; i++) {
         int vehicleID;
@@ -25,23 +25,26 @@ int main(){
 
         if(vehicleType == "Car") {
             Car car = Car(vehicleID);
-            vehicles[i] = car;
-
+            parking.parkVehicle(&car);
         } else if (vehicleType == "Bus") {
             Bus bus = Bus(vehicleID);
-            vehicles[i] = bus;
+            parking.parkVehicle(&bus);
         } else {
             Motorbike motorbike = Motorbike(vehicleID);
-            vehicles[i] = motorbike;
+            parking.parkVehicle(&motorbike);
         }
         
     }
 
+    char countVeh;
 
-    for (int i = 0; i < vehicleAmount; i++) {
-        std::cout << "Vehicle ID: " << vehicles[i].getID() << ", Time Parked: " << vehicles[i].getParkingDuration() << "s " << std::endl;
-        
+    std::cout << "Count overstaying vehicles? (Y/N): ";
+    std::cin >> countVeh;
+
+    if(countVeh = 'Y') {
+        std::cout << "Amount of overstaying vehicles: " << parking.countOverstayingVehicles(10) << std::endl;
     }
+
 
     return 0;
 }
