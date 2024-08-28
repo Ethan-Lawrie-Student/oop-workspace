@@ -25,14 +25,15 @@ public:
     }
 
     void parkVehicle(Vehicle *theVehicle) {
-        if(curNum < maxCap-1) {
+        if(curNum < maxCap) {
             vehicles[curNum] = *theVehicle;
+            curNum++;
         } else {
             std::cout << "The lot is full" << std::endl;
         }
         
 
-        curNum++;
+        
     }
 
     void unparkVehicle(int ID) {
