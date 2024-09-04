@@ -14,6 +14,7 @@ public:
     virtual double getPowerConsumption();
 
     int get_powerRating() {return powerRating;}
+    void set_powerRating(int thePowerRating);
     int get_isOn() {return isOn;}
 };
 

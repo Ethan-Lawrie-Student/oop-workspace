@@ -12,6 +12,10 @@ Appliance::Appliance(int powerRating)
     isOn = false;
 }
 
+void Appliance::set_powerRating(int thePowerRating){
+    powerRating = thePowerRating;
+}
+
 void Appliance::turnOn()
 {
     isOn = true;
