@@ -19,7 +19,7 @@ void Airplane::fly(int headwind, int minutes)
 {
     double fuelPerMinute = 0.3;
 
-    if(headwind > 60) {
+    if(headwind >= 60) {
         fuelPerMinute = 0.5;
     }
 
