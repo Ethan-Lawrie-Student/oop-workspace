@@ -13,7 +13,7 @@ AirFleet::AirFleet()
     Helicopter helicopter1 = Helicopter(10000, "BlackHawk"); 
     AirCraft airCraft =AirCraft(5000);
     Helicopter helicopter2 = Helicopter(100, "WhiteHawk");
-    Airplane Airplane2 =Airplane(15, 20);
+    Airplane Airplane2 =Airplane(43, 20);
 
     fleet[0] = &Airplane1;
     fleet[1] = &helicopter1;

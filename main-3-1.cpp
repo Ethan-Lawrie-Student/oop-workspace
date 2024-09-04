@@ -9,7 +9,10 @@ int main() {
 
     AirFleet theAirFleet = AirFleet();
 
-    std::cout << theAirFleet.get_fleet() << std::endl;
-
+    for (int i = 0; i < 5; i++)
+    {
+        
+    }
+    
     return 0;
 }
