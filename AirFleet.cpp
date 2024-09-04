@@ -23,7 +23,7 @@ AirFleet::AirFleet()
 
 }
 
-AirCraft **AirFleet::getFleet()
+AirCraft **AirFleet::get_Fleet()
 {
     return fleet;
 }
