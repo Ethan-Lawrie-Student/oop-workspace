@@ -9,8 +9,9 @@
 class AirFleet
 {
 private:
-    AirCraft **fleet;
+    
 public:
+    AirCraft **fleet;
     AirFleet();
     AirCraft ** get_fleet();
     
