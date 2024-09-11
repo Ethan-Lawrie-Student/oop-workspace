@@ -2,41 +2,47 @@
 #define UNIVERSITY_H
 
 #include <string>
+
 #include "Course.h"
+#include "Gradebook.h"
 
-class University
-{
-private:
-    std::string name;
-    std::string location;
+class University {
+ private:
+  std::string name;
+  std::string location;
 
-    Course * courses; 
-    int courseAmount; 
-    int maxCourses;
-public:
-    University(/* args */);
+  Course* courses;
+  int courseAmount;
+  int maxCourses;
 
-    University(std::string name, std::string location, int maxCourses);
+ public:
+  Gradebook uniGradebook;
+  University(/* args */);
 
-    void addCourse(int id, std::string name);
+  University(std::string name, std::string location, int maxCourses);
 
-    ~University();
+  void addCourse(int id, std::string name);
 
-    Course * getCourse(int id){
-        for (int i = 0; i < courseAmount; i++) {
-            if(courses[i].get_id() == id){
-                return &courses[i];
-            }
-        }
-        
-        // return courses[0];
+  ~University();
+
+  Course* getCourse(int id) {
+    int hasReturned = -1;
+    for (int i = 0; i < courseAmount; i++) {
+      if (courses[i].get_id() == id) {
+        hasReturned = i;
+      }
     }
 
-    void PrintCourses();
+    if (hasReturned == -1) {
+      return &courses[0];
+    } else {
+      return &courses[hasReturned];
+    }
+  }
+
+  Gradebook get_gradebook() { return uniGradebook; }
+
+  void PrintCourses();
 };
-
-
-
-
 
 #endif
