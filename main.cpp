@@ -4,6 +4,9 @@
 #include <string>
 #include <iostream>
 
+#include "Student.h"
+
+
 int main(){
     University theUni = University("Adelaide University", "North Terrace", 5);
 
@@ -11,6 +14,10 @@ int main(){
     theUni.addCourse(102, "Engineering");
 
     theUni.PrintCourses();
+
+    Student student1 = Student(10, "Ethan");
+
+    theUni.getCourse(10)->addPerson(&student1);
 
     
 
