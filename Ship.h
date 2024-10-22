@@ -15,7 +15,7 @@ class Ship : public GameEntity {
         std::make_tuple(std::get<0>(position) + dx, std::get<1>(position) + dy);
   }
   void set_pos(std::tuple<int, int> pos) { position = pos; };
-  Explosion explode() {};
+  Explosion explode() { return Explosion(); };
 };
 
 #endif

@@ -13,6 +13,7 @@ class GameEntity {
   GameEntityType type;
 
  public:
+  GameEntity() {};
   GameEntity(int x, int y, GameEntityType type);
   std::tuple<int, int> getPos() { return position; };
   GameEntityType getType() { return type; };  // Returns the type of the entity.
