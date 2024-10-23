@@ -38,7 +38,7 @@ public:
         for (int i = 0; i < experimentCoordinates.size(); i++)
         {
             if((experimentCoordinates[i].first != 0 && experimentCoordinates[i].second != 0) && (experimentCoordinates[i].first != width -1 && experimentCoordinates[i].second != height - 1)) {
-                Experiment newExperiment = Experiment(width, height);
+                Experiment newExperiment = Experiment(experimentCoordinates[i].first, experimentCoordinates[i].second,width, height);
                 experiments.push_back(newExperiment); 
             }
         }
@@ -87,9 +87,19 @@ public:
 
         for(int i = 0; i < width; i++) {
             for(int j = 0; j < height; j++) {
+                bool hasExp = false;
+                for(int k = 0 ; k < experiments.size(); k++) {
+                    if(experiments[k].getCoordinates().first == i && experiments[k].getCoordinates().second == j) {
+                        std::cout << "E";
+                    }
+                }
+
+
                 if(scientistPlayer.getCoordinates().first == i && scientistPlayer.getCoordinates().second == j) {
                     std::cout << "P";
-                } else {
+                } else if (endGoal.getCoordinates().first == i && endGoal.getCoordinates().second == j) {
+                    std::cout << "G";
+                } else if(hasExp == false) {
                     std::cout << "_";
                 }
                 

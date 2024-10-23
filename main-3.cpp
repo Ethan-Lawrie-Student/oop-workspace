@@ -33,6 +33,9 @@ int main() {
     game.movePlayer(1,0);
 
     game.movePlayer(1,0);
+
+    game.movePlayer(0,2);
+    game.movePlayer(0,1);
     // int dist = Helper::manhattanDistance(grid1.getCoordinates(), grid2.getCoordinates());
 
 

@@ -10,7 +10,7 @@ class Experiment: public Interactable
 {
 private:
 public:
-    Experiment(int width, int height) : Interactable(width-1, height-1, width, height) {};
+    Experiment(int x, int y,int width, int height) : Interactable(x,y, width, height) {};
     bool interact(Scientist* player) {
 
         int dist = Helper::manhattanDistance(this->getCoordinates(), player->getCoordinates());
